@@ -9,7 +9,6 @@ def total_cash(shop)
 end
 
 #3
-
 def add_or_remove_cash(shop, money_added)
   shop[:admin][:total_cash] += money_added
 end
@@ -83,3 +82,13 @@ end
 def add_pet_to_customer(customer, new_pet)
 return customer[:pets].push(new_pet)
 end
+
+#15
+def customer_can_afford_pet(customer, new_pet)
+if customer[:cash] < new_pet[:price]
+  return false
+else return true
+end
+end
+
+#16
